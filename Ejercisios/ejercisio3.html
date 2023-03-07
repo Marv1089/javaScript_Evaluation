@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h5>Ejercisio #3</h5>
+        <h1>Calcular el Aumento Salarial</h1>
+        <label>Ingrese su nombre:<br></label>
+        <input id= "nombre" type="text"><br><br>
+        <label>Ingrese su Salario Base</label><br>
+        <input id= "salary" type="number"><br><br>
+
+        <form action="#">
+            <label for="cat">Categoria:</label>
+            <select name="categoria" id="categoria">
+              <option value="0.15">A</option>
+              <option value="0.30">B</option>
+              <option value="0.10">C</option>
+              <option value="0.20">D</option>
+              
+            </select>
+            <button onclick= "aumentoSal(), calSalario()" >Calcular</button>
+      </form><br>
+        
+      <div id="resultado"></div>
+      <p id="estudiante" class="textContent"></p>
+
+    </center>
+
+   
+
+    <script>
+        function aumentoSal(){
+        let salarioCal = document.getElementById("salary").value;
+        //let totalSal = (select.categoryA.value, select.categoryB.value, select.categoryC.value, select.categoryD.value) * salarioCal;
+        /*let categoryA = document.getElementById("cat1").value;
+        let categoryB = document.getElementById("cat2").value;
+        let categoryC = document.getElementById("cat3").value;
+        let categoryD = document.getElementById("cat4").value;
+*/
+      var cod = document.getElementById("categoria").value;
+      let total= salarioCal * cod;
+         //   alert(total);
+       //document.write("Su Aumento Salarial es: $ " + total);
+       let parrafo = document.querySelector('p');
+            
+           
+            parrafo.textContent = "Su Aumento Salarial es: $ " + total;
+       
+
+        }
+
+        function  calSalario () {
+            let nombre = document.getElementById("nombre").value;
+            let dato = document.querySelector("div");
+            
+            dato.textContent = "Nombre: " + nombre;
+            
+            
+        }
+
+    </script>
+</body>
+</html>

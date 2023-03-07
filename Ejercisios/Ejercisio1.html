@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <center>
+    <h5>Ejercisio #1</h5>
+    <h1>Verificacion si es mayor o menor de edad</h1>
+    <label>Ingrese su edad:<br></label>
+    <input id= "edad" type="number"><br><br>
+    <button id= "edad2" onclick="VerificarEdad()" >Verificar</button>
+    </center>
+    <script>
+        function VerificarEdad(){
+
+            let edad1 = document.getElementById("edad").value;
+
+            (edad1 < 18) ? alert("Eres menor de edad") : alert ("Eres mayor de edad");
+            
+        }
+
+    </script>
+</body>
+</html>

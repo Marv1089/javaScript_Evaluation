@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <center>
+            <h5>Ejercisio #9</h5>
+            <h1>Valores Enteros</h1>
+            <label>Ingrese 10 valores enteros(divididos por una coma):<br></label>
+            <input id= "secuencia" type="text"><br><br>
+            <button id= "secuencia1" onclick="valoresNum()" >Verificar</button>
+            <p id="resultado"></p>
+        </center>
+    </body> 
+    <script>
+        function valoresNum(){
+        let divicion = document.getElementById("secuencia").value;
+        let contador_negativo = 0;
+        let contador_positivos = 0;
+        let contador_multiplos = 0;
+        let contador_Pares = 0;
+        let array = divicion.split(",");
+        let resultado = document.querySelector("p");
+            let suma = 0;
+        for(let i=0; i < array.length; i++){
+            if(array[i] % 15== 0){
+                contador_multiplos++;
+                if(array[i] < 0){
+                contador_negativo++;
+                }else if(array[i] > 0){
+                contador_positivos++;
+            }
+                }else if(array[i] % 2== 0){
+                        contador_Pares++;
+                if(array[i] < 0){
+                contador_negativo++;
+                }else if(array[i] > 0){
+                contador_positivos++;
+            }
+                }else if(array[i] < 0){
+                contador_negativo++;
+                }else if(array[i] > 0){
+                contador_positivos++;
+                }
+            resultado.innerHTML = "Total Numero Negativos: " + contador_negativo + "<br>" + "Total Numeros Positivos:" + contador_positivos + "<br>" + "Total multiplos de 15: "+ contador_multiplos+ "<br>" + "Total pares: "+ contador_Pares;}
+        
+
+    }
+
+    
+    </script>
+</html>

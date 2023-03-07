@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p></p>
+<body>
+    <center>
+        <h5>Ejercisio #4</h5>
+        <h1>¿Cual numero es mayor?</h1>
+        <label>Ingrese primer numero: <br></label>
+        <input id= "num1" type="number"><br><br>
+        <label>Ingrese segundo numero: <br></label>
+        <input id= "num2" type="number"><br><br>
+        <button onclick="mayorNumero()" >Calcular</button><br><br>
+        <center><div id="resultado"></div></center>
+    </center>
+
+</body>
+
+
+<script>
+    function mayorNumero(){
+        let calculo = document.getElementById("num1").value;
+        let calculo2 =document.getElementById("num2").value;
+        let resultado = document.querySelector("div");
+
+        if(calculo == calculo2){
+             resultado.innerHTML = "Los numeros son iguales";
+    
+        }
+
+        else{
+            if (calculo>calculo2){
+                resultado.innerHTML = "El primer numero es mayor";
+            }
+            
+            else{
+                resultado.innerHTML = "El segundo numero es mayor";
+            }
+        
+        }
+
+    }
+</script>
+</html>

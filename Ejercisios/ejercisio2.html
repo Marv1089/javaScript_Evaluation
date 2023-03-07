@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <center>
+    <h5>Ejercisio #2</h5>
+    <h1>Calculo de nota final</h1>
+    <label>Ingrese su nombre:<br></label>
+    <input id= "nombre" type = "text"><br>
+    <label >Ingresar Carnet:</label><br>
+    <input id= "carnet"><br><br>
+    <div>
+
+        <label>Ingresar Calificaciones:</label>
+        <table Border = "2">
+            
+            <tr>
+                <td>Examen</td>
+                <td><input id= "exam"></td>
+            </tr>
+            <tr>
+                <td>Tareas</td>
+                <td><input id= "tarea"></td>
+            </tr>
+            <tr>
+                <td>Asistencia</td>
+                <td><input id= "asist"></td>
+            </tr>
+            <tr>
+                <td>Investigacion</td>
+                <td><input id= "invest"></td>
+            </tr>
+
+        </table>
+        <br>
+        <button onclick="notafinal(), infoAlumnos()" >Calcular</button>
+    </div>
+    <p id="estudiante" class="textContent"></p>
+    <div id="resultado"></div>
+    </center>
+
+
+
+    <script>
+        function notafinal(){
+            let notaE = document.getElementById("exam").value * 0.20;
+            let notaT = document.getElementById("tarea").value * 0.40;
+            let notaA = document.getElementById("asist").value * 0.10;
+            let notaI = document.getElementById("invest").value * 0.30;
+            let result = notaE + notaT + notaA + notaI;
+            let parrafo = document.querySelector('p');
+            
+           
+            parrafo.textContent = "Nota final: " + result;
+         
+        }
+
+        function  infoAlumnos () {
+            let name_nombre = document.getElementById("nombre").value;
+            let carnet_Alumno = document. getElementById("carnet").value;
+            let dato = document.querySelector("div");
+            
+            dato.textContent = "Estudiante: " + name_nombre + "\n" + "Carnet: " + carnet_Alumno;
+            
+        }
+ 
+    </script>
+</body>
+</html> 

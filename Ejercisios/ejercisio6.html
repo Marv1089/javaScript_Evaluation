@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <center>
+            <h5>Ejercisio #6</h5>
+            <h1> Calcular descuento turistico</h1>
+           
+            <div id="container">
+                <p>Ciudad de Origen: La Palma</p>
+                <div>
+                    <input type="radio" id="tour" name="tour" value="5%">
+                    <label for="tour">Costa del Sol</label>
+             
+                    <input type="radio" id="tour2" name="tour" value="10%">
+                    <label for="tour2">Panchimalco</label>
+             
+                    <input type="radio" id="tour3" name="tour" value="15%">
+                    <label for="tour3">Puerto el Triunfo</label><br><br>
+                </div>
+                <button onclick="tourdiscount()">Calcular</button>
+                </div>
+                
+        </center>
+    </body>
+    <script>
+        function tourdiscount(){
+        var radio = document.querySelector('input[name="tour"]:checked').value;
+        
+
+        if (radio) {
+            alert("Su descuento es: "+ radio);
+        }
+        else {
+            alert('Seleccione una opcion');
+        }
+    }
+
+    </script>
+</html>

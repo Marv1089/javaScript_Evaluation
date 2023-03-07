@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h5>Ejercisio #8</h5>
+        <h1>Grados Celcius a Grados Fahrenheit</h1>
+        <label>Ingrese temperatura en grados celcius: <br></label>
+        <input id= "temp" type="number"><br><br>
+        <button id= "temp2" onclick="caTemp()" >Verificar</button>
+        </center>
+</body>
+<script>
+    function caTemp(){
+        let tempCelsius = document.getElementById("temp").value;
+        let tempFah = (tempCelsius*9/5)+32;
+
+        if (tempFah<=32){
+
+             alert("Temperatura baja: "+ tempFah + "°F");
+        }
+
+        else
+             if (tempFah<=68){
+
+                alert("Temperatura Adecuada: "+ tempFah + "°F");
+            }
+            
+            else 
+                if(tempFah<=96){
+
+                alert("Temperatura alta: "+ tempFah + "°F");
+                }
+
+            else {
+
+                alert("Temperatura desconocida");
+                 }
+    }
+
+</script>
+</html>

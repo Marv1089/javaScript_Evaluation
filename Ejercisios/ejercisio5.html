@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h5>Ejercisio #5</h5>
+        <h1> Calcular descuento</h1>
+        <form action="#">
+            <label for="car">Selecione el tipo de carro:</label>
+            <select name="categoria" id="categoria">
+              <option value="0.05">Ford Fiesta</option>
+              <option value="0.10">Ford Focus</option>
+              <option value="0.20">Ford Scape</option>
+              
+            </select>
+    
+      </form><br>
+       
+        <button onclick="cardiscount()" >Calcular</button><br><br>
+        <center><div id="resultado"></div></center>
+    </center>
+</body>
+<script>
+    function cardiscount(){
+        var cod = document.getElementById("categoria").value;
+        let totaldicount = cod * 100;
+        let resultado = document.querySelector("div");
+
+        resultado.innerHTML = "Su descuento es: " + totaldicount + "%";
+
+    }
+</script>
+</html>

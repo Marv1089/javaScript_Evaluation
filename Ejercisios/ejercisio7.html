@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h5>Ejercisio #7</h5>
+        <h1>Nota Ponderada</h1>
+        <label>Ingrese su primer nota (vale 30% de su nota final):<br></label>
+        <input id= "score" type="number"><br><br>
+        <label>Ingrese su segunda nota (vale 70% de su nota final):<br></label>
+        <input id= "score2" type="number"><br><br>
+        <button id= "push" onclick="verificarNota()" >Verificar</button><br><br>
+        <center><div id="resultado"></div></center>
+        </center>
+</body>
+<script>
+    function verificarNota(){
+        let primerNota = document.getElementById("score").value * 0.30;
+        let segundaNota = document.getElementById("score2").value * 0.70;
+        let notalTotal = (primerNota +segundaNota)/2;
+        let resultado = document.querySelector("div");
+
+        resultado.innerHTML = "Su nota final es:  " + notalTotal;
+    }
+</script>
+</html>
